@@ -5,20 +5,27 @@ char[][] shelfSlots = input.Select(shelfRow =>
     return shelfRow.ToCharArray();
 }).ToArray();
 
-int count = 0;
+int finalCount = 0;
+while (paperFound(out var addCount)) { finalCount += addCount; }
 
-for(int i = 0; i < shelfSlots.Length; i++)
+Console.WriteLine(finalCount);
+
+bool paperFound(out int count)
 {
-    for(int j = 0; j < shelfSlots[i].Length; j++)
+    count = 0;
+    for (int i = 0; i < shelfSlots.Length; i++)
     {
-        if(shelfSlots[i][j] == '@' && canBeAccessed(shelfSlots, i, j))
+        for (int j = 0; j < shelfSlots[i].Length; j++)
         {
-            count++;
+            if (shelfSlots[i][j] == '@' && canBeAccessed(shelfSlots, i, j))
+            {
+                shelfSlots[i][j] = '.';
+                count++;
+            }
         }
     }
+    return count > 0;
 }
-
-Console.WriteLine(count);
 
 bool canBeAccessed(char[][] shelf, int x, int y){
     //-1 to account for the roll of paper at (x, y)
