@@ -1,4 +1,4 @@
-﻿
+﻿// part 2 makes the "Ingredient" record and comparisons irrelevant, kept them here anyway
 var input = File.ReadLines("res/ingredientIds.csv");
 
 bool pastSeparator = false;
@@ -23,9 +23,29 @@ foreach (string line in input)
     
 }
 // could build a custom binary search for start values to make the main loop O(m log n), but overkill for this problem
-// idSets.Sort();
+idSets.Sort((a, b) => a.start.CompareTo(b.start));
 
-var total = 0;
+List<IdSet> collapsedRanges = new List<IdSet>();
+foreach(IdSet idSet in idSets)
+{
+    if (collapsedRanges.Count == 0)
+    {
+        collapsedRanges.Add(idSet);
+        continue;
+    }
+    var prev = collapsedRanges[collapsedRanges.Count - 1];
+    if (idSet.start <= prev.end+1)
+    {
+        collapsedRanges[collapsedRanges.Count - 1] = prev with { end = Math.Max(prev.end, idSet.end) };
+    }
+    else
+    {
+        collapsedRanges.Add(idSet);
+    }
+}
+
+// main loop for part 1
+/*var total = 0;
 while(ingredients.Count > 0)
 {
     if (ContainsIngredient(ingredients[ingredients.Count-1])){
@@ -34,7 +54,16 @@ while(ingredients.Count > 0)
     ingredients.RemoveAt(ingredients.Count - 1);
 }
 
-Console.WriteLine(total);
+Console.WriteLine("Part 1");
+Console.WriteLine(total);*/
+
+var totalPart2 = collapsedRanges.Aggregate((long)0, (count, range) =>
+{
+    return count+range.end - range.start + 1;
+});
+
+Console.WriteLine("Part 2");
+Console.WriteLine(totalPart2);
 
 bool ContainsIngredient(Ingredient ingredient)
 {
