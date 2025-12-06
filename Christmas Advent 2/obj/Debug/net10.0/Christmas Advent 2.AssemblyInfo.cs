@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Christmas Advent 2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+11026d230e359463e2642795843b014975efcb2b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Christmas Advent 2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Christmas Advent 2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
