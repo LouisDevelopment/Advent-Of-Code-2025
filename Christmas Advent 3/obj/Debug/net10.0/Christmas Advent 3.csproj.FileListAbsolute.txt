@@ -1,0 +1,15 @@
+Y:\Christmas of Code\Christmas Advent 3\bin\Debug\net10.0\Christmas Advent 3.exe
+Y:\Christmas of Code\Christmas Advent 3\bin\Debug\net10.0\res\joltageList.csv
+Y:\Christmas of Code\Christmas Advent 3\bin\Debug\net10.0\Christmas Advent 3.deps.json
+Y:\Christmas of Code\Christmas Advent 3\bin\Debug\net10.0\Christmas Advent 3.runtimeconfig.json
+Y:\Christmas of Code\Christmas Advent 3\bin\Debug\net10.0\Christmas Advent 3.dll
+Y:\Christmas of Code\Christmas Advent 3\bin\Debug\net10.0\Christmas Advent 3.pdb
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\Christmas Advent 3.GeneratedMSBuildEditorConfig.editorconfig
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\Christmas Advent 3.AssemblyInfoInputs.cache
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\Christmas Advent 3.AssemblyInfo.cs
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\Christmas Advent 3.csproj.CoreCompileInputs.cache
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\Christmas Advent 3.dll
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\refint\Christmas Advent 3.dll
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\Christmas Advent 3.pdb
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\Christmas Advent 3.genruntimeconfig.cache
+Y:\Christmas of Code\Christmas Advent 3\obj\Debug\net10.0\ref\Christmas Advent 3.dll
