@@ -58,7 +58,7 @@ int SendBeamDown(char[][] inputGrid, int x, int y, int currentCount)
             inputGrid[y + 1][x - 1] = '|';
             left = SendBeamDown(inputGrid, x - 1, y + 1, currentCount);
         }
-        if(y < inputGrid.Length)
+        if(x < inputGrid[y + 1].Length)
         {
             inputGrid[y + 1][x + 1] = '|';
             right = SendBeamDown(inputGrid, x + 1, y + 1, currentCount);
