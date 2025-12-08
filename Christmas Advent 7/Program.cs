@@ -51,9 +51,19 @@ int SendBeamDown(char[][] inputGrid, int x, int y, int currentCount)
         return SendBeamDown(inputGrid, x, y + 1, currentCount);
     } else if (next == '^')
     {
-        inputGrid[y + 1][x - 1] = '|';
-        inputGrid[y + 1][x + 1] = '|';
-        return SendBeamDown(inputGrid, x - 1, y + 1, currentCount) + SendBeamDown(inputGrid, x+1, y+1, currentCount) + 1;
+        int left = 0, right = 0;
+        // bounds validation
+        if (x > 0)
+        {
+            inputGrid[y + 1][x - 1] = '|';
+            left = SendBeamDown(inputGrid, x - 1, y + 1, currentCount);
+        }
+        if(x < inputGrid[y + 1].Length)
+        {
+            inputGrid[y + 1][x + 1] = '|';
+            right = SendBeamDown(inputGrid, x + 1, y + 1, currentCount);
+        }
+        return left + right + 1;
     }
     return currentCount;
 }
